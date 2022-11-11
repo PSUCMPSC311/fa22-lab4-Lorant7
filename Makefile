@@ -3,7 +3,7 @@ CFLAGS=-c -Wall -I. -fpic -g -fbounds-check -Werror
 LDFLAGS=-L.
 LIBS=-lcrypto
 
-OBJS=tester.o util.o mdadm.o cache.o
+OBJS=tester-3.o util.o mdadm.o cache.o
 
 %.o:	%.c %.h
 	$(CC) $(CFLAGS) $< -o $@
