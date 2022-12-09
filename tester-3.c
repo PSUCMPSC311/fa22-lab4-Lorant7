@@ -196,9 +196,9 @@ int test_read_invalid_parameters() {
     goto out;
   }
 
-  uint8_t buf2[2048];
+  uint8_t buf2[2049];
   if (mdadm_read(0, sizeof(buf2), buf2) != -1) {
-    printf("failed: read should fail on larger than 1024-byte I/O sizes but it did not.\n");
+    printf("failed: read should fail on larger than 2048-byte I/O sizes but it did not.\n");
     goto out;
   }
 
@@ -490,9 +490,9 @@ int test_write_invalid_parameters() {
     goto out;
   }
 
-  uint8_t buf2[2048];
+  uint8_t buf2[2049];
   if (mdadm_write(0, sizeof(buf2), buf2) != -1) {
-    printf("failed: write should fail on larger than 1024-byte I/O sizes but it did not.\n");
+    printf("failed: write should fail on larger than 2048-byte I/O sizes but it did not.\n");
     goto out;
   }
 
